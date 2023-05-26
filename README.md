@@ -1,5 +1,3 @@
-# Project 2<br>Node/Express/MongoDB<br>Full-stack Application## 
-
 # **IGDB!**
 ![](https://media.tenor.com/X_QPK9foQwoAAAAM/controller.gif)
 
