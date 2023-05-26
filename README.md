@@ -17,7 +17,7 @@ In this web app, users will be able to access a database of video games
 
 ![](https://img.itch.zone/aW1nLzQxODY0MDAuZ2lm/original/9Mhi2I.gif)
 
-## **Technologies Used**
+## **Technologies Implemented**
 1. HTML
 2. CSS
 3. Javascript
