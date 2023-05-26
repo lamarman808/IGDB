@@ -11,7 +11,12 @@
 
 ##### **Description**
 ***
-In this web app, users will be able to access a database of video games 
+In this web app, users will be able to access a database of video games.
+In very much the same way that users acces the Internet Movie DataBase websites and applications, so shall this app function!
+Here, you can find a list of your favorite games from all your favorite companies!
+Users can see which games are exclusive to which consoles, and players can even leave reviews to encourage or discourage other players to play or not play certain games!
+
+
 
 ![](https://img.itch.zone/aW1nLzQxODY0MDAuZ2lm/original/9Mhi2I.gif)
 
