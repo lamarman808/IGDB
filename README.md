@@ -9,10 +9,9 @@
 ## [Linkedin Profile for Business](https://www.linkedin.com/in/kendalchaney88/) | [Insta Profile for Pleasure](https://www.instagram.com/lamarman808/)
 ***
 ##### **Description**
-In this web app, users will be able to access a database of video games.
-In very much the same way that users acces the Internet Movie DataBase websites and applications, so shall this app function!
+In this web app, users will be able to access a database of video games created by gamers FOR gamers.
+In very much the same way that users acces Yelp to add unique reviews to places they've been or sampled, so shall gamers be able to do the same with games they've played!
 ***
-Here, you can find a list of your favorite games from all your favorite companies!
 Users can see which games are exclusive to which consoles, and players can even leave reviews to encourage or discourage other players to play or not play certain games!
 User credentials allow Official IGDB Players to add new games to the database for all to see!
 
