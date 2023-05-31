@@ -7,15 +7,15 @@ router.get('/', function (req, res, next) {
 })
 
 // You'll be creating this controller module next
-const moviesCtrl = require('../controllers/movies')
+const gamesCtrl = require('../controllers/games')
 
-// GET /movies
-router.get('/', moviesCtrl.index)
-// GET /movies/new
-router.get('/new', moviesCtrl.new)
-// GET /movies/:id (show functionality) MUST be below new route
-router.get('/:id', moviesCtrl.show)
-// POST /movies
-router.post('/', moviesCtrl.create)
+// GET /games
+router.get('/', gamesCtrl.index)
+// GET /games/new
+router.get('/new', gamesCtrl.new)
+// GET /games/:id (show functionality) MUST be below new route
+router.get('/:id', gamesCtrl.show)
+// POST /games
+router.post('/', gamesCtrl.create)
 
 module.exports = router
