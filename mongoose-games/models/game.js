@@ -14,23 +14,19 @@ const reviewSchema = new Schema({
 })
 
 const gameSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  console: { type: String, required: true },
-  exclusive: { Boolean },
+  title: String,
+  console: String,
+  exclusive: Boolean,
   releaseYear: {
     type: Number,
-    default: function () {
-      return new Date().getFullYear()
-    },
     min: 1994,
-    max: 2023
+    default: 2023
   },
   esrbRating: {
     type: String,
     enum: ['E', 'E10+', 'T', 'M', 'Ao', 'RP']
   },
-  cast: [String],
-  multiplayer: { type: Boolean, default: true },
+  multiplayer: Boolean,
   reviews: [reviewSchema]
 })
 
