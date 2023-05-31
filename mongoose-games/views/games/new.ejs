@@ -1,0 +1,56 @@
+<%- include('../partials/header') %>
+
+<form id="game-form" action="/games" method="POST">
+  <label>Game Title:</label>
+  <input type="text" name="title">
+  <label>Release Year:</label>
+  <input type="text" name="releaseYear">
+  <label>ESRB Rating</label>
+  <select name="esrbRating">
+    <option value="E">E</option>
+    <option value="E10">E10</option>
+    <option value="T">T</option>
+    <option value="M">M</option>
+    <option value="Ao">Ao</option>
+    <option value="RP">RP</option>
+  </select>
+  <label>Console(s)</label>
+  <select name="console">
+    <option value="PlayStation">PlayStation</option>
+    <option value="PlayStation 2">PlayStation 2</option>
+    <option value="PlayStation 3">PlayStation 3</option>
+    <option value="PSP">PSP</option>
+    <option value="PS4">PS4</option>
+    <option value="PS Vita">PS Vita</option>
+    <option value="PS5">PS5</option>
+    <option value="Xbox">Xbox</option>
+    <option value="Xbox360">Xbox360</option>
+    <option value="Xbox One">Xbox One</option>
+    <option value="Xbox Series X">Xbox Series X</option>
+    <option value="SG-1000">SG-1000</option>
+    <option value="Sega Master System">Sega Master System</option>
+    <option value="Sega Genesis">Sega Genesis</option>
+    <option value="Sega Game Gear">Sega Game Gear</option>
+    <option value="Sega Saturn">Sega Saturn</option>
+    <option value="Sega Dreamcast">Sega Dreamcast</option>
+    <option value="Nintendo">Nintendo</option>
+    <option value="Super Nintendo">Super Nintendo</option>
+    <option value="Nintendo 64">Nintendo 64</option>
+    <option value="Gamecube">Gamecube</option>
+    <option value="Wii U">Wii U</option>
+    <option value="Gameboy Color">Gameboy Color</option>
+    <option value="Gameboy Advance">Gameboy Advance</option>
+    <option value="PC">Personal Computer</option>
+  </select>
+  <label>Console Exclusive:</label>
+  <input type="checkbox" name="exclusive" checked>
+  <input type="submit" value="Add Game">
+  <label>Multiplayer:</label>
+  <input type="checkbox" name="multiplayer" checked>
+  <input type="submit" value="Add Game">
+  <label>Couch Co-Op:</label>
+  <input type="checkbox" name="couchCoOp" checked>
+  <input type="submit" value="Add Game">
+</form>
+
+<%- include('../partials/footer') %>

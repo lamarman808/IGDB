@@ -15,8 +15,6 @@ const reviewSchema = new Schema({
 
 const gameSchema = new mongoose.Schema({
   title: String,
-  console: String,
-  exclusive: Boolean,
   releaseYear: {
     type: Number,
     min: 1994,
@@ -26,7 +24,40 @@ const gameSchema = new mongoose.Schema({
     type: String,
     enum: ['E', 'E10+', 'T', 'M', 'Ao', 'RP']
   },
+  console: {
+    type: String,
+    enum: [
+      'PlayStation',
+      'PlayStation 2',
+      'PlayStation 3',
+      'PSP',
+      'PS4',
+      'PS Vita',
+      'PS5',
+      'Xbox',
+      'Xbox360',
+      'Xbox One',
+      'Xbox Series X',
+      'SG-1000',
+      'Sega Master System',
+      'Sega Genesis',
+      'Sega Game Gear',
+      'Sega Saturn',
+      'Sega Dreamcast',
+      'Nintendo',
+      'Super Nintendo',
+      'Nintendo 64',
+      'Gamecube',
+      'Wii',
+      'Wii U',
+      'Gameboy Color',
+      'Gameboy Advance',
+      'PC'
+    ]
+  },
+  exclusive: Boolean,
   multiplayer: Boolean,
+  couchCoOp: Boolean,
   reviews: [reviewSchema]
 })
 
