@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+  <div>Title: </div>
+  <div><%= game.title %></div>
+  <div>Release Year: </div>
+  <div><%= game.releaseYear %></div>
+  <div>ESRB Rating: </div>
+  <div><%= game.esrbRating %></div>
+  <div>Cast: </div>
+  <div><%= game.console.join(', ') %></div>
+  <div>Console Exclusive: </div>
+  <div><%= game.exclusive ? 'Yes!' : 'Nizz' %></div>
+  <div>Multiplayer Capable: </div>
+  <div><%= game.multiplayer ? 'Yes!' : 'Nizzly Bear' %></div>
+  <div>Couch Co-Op: </div>
+  <div><%= game.couchCoOp ? 'Yes!' : 'Queen ENizzabeth' %></div>
+</section>
+  <!-- new markup below -->
+<br><br><h2>Reviews</h2>
+<form id="add-review-form" method="POST"
+  action="/games/<%= game._id %>/reviews">
+  <label>Review:</label>
+  <textarea name="comment"></textarea>
+  <label>Recommend to Play:</label>
+  <select name="recommend">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3" selected>3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <input type="submit" value="Add Review">
+</form>
+<%- include('../partials/footer') %>
