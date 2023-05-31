@@ -11,7 +11,7 @@ const show = async (req, res) => {
 } // Function to Show Games on the 'show' path
 
 const newGame = (req, res) => {
-  res.render('games/new', { errorMsg: '' })
+  res.render('games/new', { title: 'New Game', errorMsg: '' })
 } // Function to Add New Games to the 'new' path
 
 const create = async (req, res) => {
