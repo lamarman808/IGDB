@@ -1,9 +1,5 @@
 const Game = require('../models/game')
 
-const newGame = (req, res) => {
-  res.render('games/new', { errorMsg: '' })
-} // Function to Add New Games to the 'new' path
-
 const index = async (req, res) => {
   const games = await Game.find({})
   res.render('games/index', { title: 'Game Info', games })
@@ -13,6 +9,10 @@ const show = async (req, res) => {
   const game = await Game.findById(req.params.id)
   res.render('games/show', { title: 'Game Board', game })
 } // Function to Show Games on the 'show' path
+
+const newGame = (req, res) => {
+  res.render('games/new', { errorMsg: '' })
+} // Function to Add New Games to the 'new' path
 
 const create = async (req, res) => {
   req.body.exclusive = !!req.body.exclusive
@@ -28,8 +28,8 @@ const create = async (req, res) => {
 } // Function to render console(s) array
 
 module.exports = {
-  new: newGame,
   index,
   show,
+  new: newGame,
   create
 }
