@@ -21,18 +21,18 @@ const create = async (req, res) => {
   // removal of whitespace at the start & end of 'console';
   req.body.consoles = req.body.consoles.trim()
   console.log(req.body)
-  if (req.body.consoles) req.body.consoles = req.body.consoles.split(/\s*,\s*/)
   try {
+    console.log('TRIED IT')
     await Game.create(req.body)
     res.redirect('/games')
   } catch (err) {
-    console.log(err) // REMOVE AS ERRORS FADE
+    console.log('CAUGHT IT', err.message) // REMOVE AS ERRORS FADE
     res.render('games/new', { errorMsg: err.message })
   }
 } // Function to render console(s) array
 
-const deleteGame = (req, res) => {
-  Game.deleteOne(req.params.id)
+const deleteGame = async (req, res) => {
+  await Game.deleteOne({ _id: req.params.id })
   res.redirect('/games')
 } // Function to delete an individual Game entry
 

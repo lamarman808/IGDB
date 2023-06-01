@@ -12,5 +12,7 @@ router.get('/new', gamesCtrl.new)
 router.get('/:id', gamesCtrl.show)
 // POST /games
 router.post('/', gamesCtrl.create)
+// DELETE One Jawn
+router.delete('/:id', gamesCtrl.delete)
 
 module.exports = router

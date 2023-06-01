@@ -8,7 +8,6 @@
   <div>ESRB Rating: </div>
   <div><%= game.esrbRating %></div>
   <div>Cast: </div>
-  <div><%= game.consoles.join(', ') %></div>
   <div>Console Exclusive: </div>
   <div><%= game.exclusive ? 'Yes!' : 'Nizz' %></div>
   <div>Multiplayer Capable: </div>
@@ -22,8 +21,8 @@
   <label>Review:</label>
   <textarea name="content"></textarea>
   <br>
-  <h3>1 = Don't Recommend; 5 = PLAY THIS GAME TODAY!</h3>
   <label>Recommend to Players:</label>
+  <h3>1 = Don't Recommend; 5 = PLAY THIS GAME TODAY!</h3>
   <select name="recommend">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -32,5 +31,8 @@
     <option value="5">5</option>
   </select>
   <input type="submit" value="Add Review">
+</form>
+<form action="/games/<%= game._id %>?_method=DELETE" class="delete-form" method="POST">
+  <button type="submit">X</button>
 </form>
 <%- include('../partials/footer') %>
