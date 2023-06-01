@@ -16,7 +16,7 @@ const newGame = (req, res) => {
 
 const create = async (req, res) => {
   req.body.exclusive = !!req.body.exclusive
-  // remove any whitespace at the start & end of console;
+  // removal of whitespace at the start & end of 'console';
   req.body.console = req.body.console.trim()
   if (req.body.console) req.body.console = req.body.console.split(/\s*,\s*/)
   try {

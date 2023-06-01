@@ -14,15 +14,17 @@
   <div>Multiplayer Capable: </div>
   <div><%= game.multiplayer ? 'Yes!' : 'Nizzly Bear' %></div>
   <div>Couch Co-Op: </div>
-  <div><%= game.couchCoOp ? 'Yes!' : 'Queen ENizzabeth' %></div>
+  <div><%= game.couchCoOp ? 'Yes!' : 'Queen ENizzabeth' %></div><br>
 </section>
   <!-- new markup below -->
 <br><br><h2>Reviews</h2>
-<form id="add-review-form" method="POST"
+<form id="review-form" method="POST"
   action="/games/<%= game._id %>/reviews">
   <label>Review:</label>
-  <textarea name="comment"></textarea>
-  <label>Recommend to Play:</label>
+  <textarea name="content"></textarea>
+  <br>
+  <h3>1 = Don't Recommend; 5 = PLAY THIS GAME TODAY!</h3>
+  <label>Recommend to Players:</label>
   <select name="recommend">
     <option value="1">1</option>
     <option value="2">2</option>
