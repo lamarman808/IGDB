@@ -9,6 +9,7 @@ require('./config/database')
 
 const indexRouter = require('./routes/index')
 const gamesRouter = require('./routes/games')
+const reviewsRouter = require('./routes/reviews')
 
 const app = express()
 
