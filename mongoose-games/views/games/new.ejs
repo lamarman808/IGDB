@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2>New Game+</h2>
+<h2 id="form-title">New Game+</h2>
 <form id="add-form" action="/games" method="POST">
   <label>Game Title:</label>
   <input type="text" name="title">
@@ -15,7 +15,7 @@
     <option value="Ao">Adults Only</option>
     <option value="RP">Rating Pending</option>
   </select>
-  <label>Console(s)</label>
+  <label>Console</label>
   <select name="console">
     <option value="PlayStation">PlayStation</option>
     <option value="PlayStation 2">PlayStation 2</option>

@@ -11,6 +11,18 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+label {
+color: cyan;
+}
+
+input, select {
+  background-color: khaki;
+}
+
+#form-title {
+  color: darkturquoise;
+}
+
 a {
   color: #00B7FF;
 }
