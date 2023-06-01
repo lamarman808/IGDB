@@ -32,6 +32,7 @@ const create = async (req, res) => {
 } // Function to render console(s) array
 
 const deleteGame = async (req, res) => {
+  // Specify ID by passing in ID. MUST Be async function!
   await Game.deleteOne({ _id: req.params.id })
   res.redirect('/games')
 } // Function to delete an individual Game entry
