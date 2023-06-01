@@ -16,12 +16,15 @@ const newGame = (req, res) => {
 
 const create = async (req, res) => {
   req.body.exclusive = !!req.body.exclusive
+  req.body.multiplayer = !!req.body.multiplayer
+  req.body.couchCoOp = !!req.body.couchCoOp
   // removal of whitespace at the start & end of 'console';
-  req.body.console = req.body.console.trim()
-  if (req.body.console) req.body.console = req.body.console.split(/\s*,\s*/)
+  req.body.consoles = req.body.consoles.trim()
+  console.log(req.body)
+  if (req.body.consoles) req.body.consoles = req.body.consoles.split(/\s*,\s*/)
   try {
     await Game.create(req.body)
-    res.redirect('/games/new')
+    res.redirect('/games')
   } catch (err) {
     res.render('games/new', { errorMsg: err.message })
   }

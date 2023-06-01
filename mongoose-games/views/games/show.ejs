@@ -8,7 +8,7 @@
   <div>ESRB Rating: </div>
   <div><%= game.esrbRating %></div>
   <div>Cast: </div>
-  <div><%= game.console.join(', ') %></div>
+  <div><%= game.consoles.join(', ') %></div>
   <div>Console Exclusive: </div>
   <div><%= game.exclusive ? 'Yes!' : 'Nizz' %></div>
   <div>Multiplayer Capable: </div>
@@ -16,7 +16,6 @@
   <div>Couch Co-Op: </div>
   <div><%= game.couchCoOp ? 'Yes!' : 'Queen ENizzabeth' %></div><br>
 </section>
-  <!-- new markup below -->
 <br><br><h2>Reviews</h2>
 <form id="review-form" method="POST"
   action="/games/<%= game._id %>/reviews">
