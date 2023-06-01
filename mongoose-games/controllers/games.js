@@ -26,13 +26,20 @@ const create = async (req, res) => {
     await Game.create(req.body)
     res.redirect('/games')
   } catch (err) {
+    console.log(err) // REMOVE AS ERRORS FADE
     res.render('games/new', { errorMsg: err.message })
   }
 } // Function to render console(s) array
+
+const deleteGame = (req, res) => {
+  Game.deleteOne(req.params.id)
+  res.redirect('/games')
+} // Function to delete an individual Game entry
 
 module.exports = {
   index,
   show,
   new: newGame,
-  create
+  create,
+  delete: deleteGame
 }
