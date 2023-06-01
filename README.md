@@ -32,6 +32,7 @@ Like Yelp, the breadth of reviews for each game are meant to both help players d
 3. Javascript
 4. EJS
 5. OAth
+6. HIROKU
 
 ### Getting Started
 This right herer is for the Players!

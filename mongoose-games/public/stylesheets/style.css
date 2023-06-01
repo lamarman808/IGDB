@@ -15,6 +15,12 @@ label {
 color: cyan;
 }
 
+h4 {
+  color: cornflowerblue;
+}
+h4:hover {
+  color: gold;
+}
 
 input, select {
   background-color: khaki;

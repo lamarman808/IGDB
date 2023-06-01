@@ -30,7 +30,7 @@ const gameSchema = new Schema(
       type: String,
       enum: ['E', 'E10+', 'T', 'M', 'Ao', 'RP']
     },
-    consoles: {
+    console: {
       type: String,
       enum: [
         'PlayStation',
