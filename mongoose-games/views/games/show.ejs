@@ -59,7 +59,7 @@
           <td><%= g.recommend %></td>
           <td>
             <% if (user?._id.equals(g.user)) { %>
-                <form action="/reviews/<%= g._id %>?_method=DELETE">
+                <form action="/reviews/<%= g._id %>?_method=DELETE" method="POST">
                   <button type="submit">X</button>
                 </form>
            <% } %>

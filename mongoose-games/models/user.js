@@ -3,7 +3,13 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema(
   {
-    name: String
+    name: String,
+    googleId: {
+      type: String,
+      required: true
+    },
+    email: String,
+    avatar: String
   },
   {
     timestamps: true
@@ -11,3 +17,5 @@ const userSchema = new Schema(
 )
 
 module.exports = mongoose.model('User', userSchema)
+
+// Tracks Users in app!

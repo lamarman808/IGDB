@@ -10,6 +10,13 @@
 <body>
   <body>
     <nav>
-      <a href="/">HOME</a> | <a href="/games">GAME BOARD</a> | <a href="/games/new">ADD A GAME</a>
+      <a href="/">HOME</a>
+      <a href="/games">GAME BOARD</a>
+      <% if (user) { %>
+      <a href="/games/new">ADD A GAME</a>
+      <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
     </nav>
     <p>GAME ON!</p>
