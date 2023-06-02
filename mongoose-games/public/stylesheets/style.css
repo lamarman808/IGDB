@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Righteous', cursive;
+  font-size: x-large;
 }
 
 body {
@@ -11,13 +13,25 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+p {
+  color: gold;
+}
+
+nav {
+  color: burlywood;
+}
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
 label {
 color: cyan;
 }
 
-h4 {
+h3, h4 {
   color: cornflowerblue;
-  /* animate__flash */
 };
 
 h4:hover {
@@ -32,8 +46,11 @@ input, select {
   color: darkturquoise;
 }
 
-a {
+a, h2 {
   color: plum;
+}
+h2 {
+  color:darkseagreen;
 }
 
 .login {
@@ -56,4 +73,22 @@ a {
 .review-user img {
   border-radius: 50%;
   height: 40px;
+}
+
+a:hover {
+  color: aliceblue;
+}
+
+table {
+  font-size: 20px;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
 }
