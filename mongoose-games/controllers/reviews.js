@@ -14,6 +14,27 @@ const create = async (req, res) => {
   res.redirect(`/games/${game._id}`)
 }
 
+const deleteReview = (req, res, next) => {
+  Game.findOne(
+    {
+      'reviews._id': req.params.id,
+      'reviews.user': req.user._id
+    }.then(function (game) {
+      if (!game) return res.redirect('/games')
+      game.reviews.remove(req.params.id)
+      game
+        .save()
+        .then(function () {
+          res.redirect(`/games/${game._id}`)
+        })
+        .catch(function (err) {
+          return next(err)
+        })
+    })
+  )
+}
+
 module.exports = {
-  create
+  create,
+  delete: deleteReview
 }
