@@ -1,7 +1,7 @@
 ***
+(Parenthesis = stretch goals)
 -> DON'T FORGET TO ADD YOUR USER AUTHENTICATION
 -> I WANT TO SEE A SUPER NERDY GAMER FONT
-(Parenthesis = stretch goals)
 -> I want users to be encouraged to use their gamer tags as their login credentials.
 (-> I want users' console(s) of choice to be displayed constantly while they are logged in)
 -> I want to be able to see a list of games uploaded by other gamers with their reviews of what they've played. 

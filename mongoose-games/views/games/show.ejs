@@ -15,6 +15,7 @@
   <div><%= game.couchCoOp ? 'Yes!' : 'Queen ENizzabeth' %></div><br>
 </section>
 <br><br><h2>Reviews</h2>
+<% if (user) { %>
 <form id="review-form" method="POST"
   action="/games/<%= game._id %>/reviews">
   <label>Review:</label>
@@ -34,8 +35,7 @@
 <form action="/games/<%= game._id %>?_method=DELETE" class="delete-form" method="POST">
   <button type="submit">X</button>
 </form>
-
-</form>
+<% } %>
 
 <!-- Reviews Details below -->
 
@@ -43,17 +43,27 @@
   <table>
     <thead>
       <tr>
+        <th>Player</th>
         <th>Date</th>
         <th>Review</th>
         <th>Player Recommendation</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <% game.reviews.forEach(function(g) { %>
         <tr>
+          <td class="review-user"><img alt="avatar" src="<%= g.userAvatar %>" referrerpolicy="no-referrer"> <%= g.userName %></td>
           <td><%= g.createdAt.toLocaleDateString() %></td>
           <td><%= g.content %></td>
           <td><%= g.recommend %></td>
+          <td>
+            <% if (user?._id.equals(g.user)) { %>
+                <form action="/reviews/<%= g._id %>?_method=DELETE">
+                  <button type="submit">X</button>
+                </form>
+           <% } %>
+          </td>
         </tr>
       <% }); %>
     </tbody>

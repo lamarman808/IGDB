@@ -17,10 +17,13 @@ color: cyan;
 
 h4 {
   color: cornflowerblue;
-}
+  /* animate__flash */
+};
+
 h4:hover {
   color: gold;
 }
+
 
 input, select {
   background-color: khaki;
