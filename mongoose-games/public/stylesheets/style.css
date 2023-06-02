@@ -22,10 +22,10 @@ nav {
 }
 nav > a {
   margin: 20px;
-  text-decoration: none;
   padding: 10px;
   border-radius: 5px;
 }
+
 label {
 color: cyan;
 }
@@ -50,6 +50,7 @@ a, h2 {
   color: plum;
 }
 h2 {
+  justify-content: center;
   color:darkseagreen;
 }
 
@@ -90,12 +91,12 @@ a:hover {
 }
 
 table {
-  font-size: 5px;
+  font-size: 1px;
 }
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid #55bdd2;
 }
 
 table td {
