@@ -14,13 +14,11 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+
 p {
   color: gold;
 }
 
-nav {
-  color: burlywood;
-}
 nav > a {
   margin: 20px;
   padding: 10px;
@@ -47,12 +45,13 @@ input, select {
   color: darkturquoise;
 }
 
-a, h2 {
+a {
   color: plum;
 }
+
 h2 {
-  justify-content: center;
-  color:darkseagreen;
+  color:#55bdd2;
+  text-align: center;
 }
 
 #show-page {
@@ -92,6 +91,7 @@ a:hover {
 }
 
 table {
+  color: honeydew;
   font-size: 1px;
 }
 
