@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const ensureLoggedIn = require('../config/logger')
 
-// You'll be creating this controller module next
 const gamesCtrl = require('../controllers/games')
 
 // GET /games
